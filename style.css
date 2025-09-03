@@ -2,33 +2,33 @@ body {
     font-family: sans-serif;
     margin: 0;
     line-height: 1.6;
-    background-color: #0d0f12; /* Un gris muy oscuro o negro que combine con tus fotos. */
+    background-color: transparent; /* ¡Cambiado! Ahora el fondo del body es transparente para que se vea la imagen. */
     color: #333;
 }
 
-/* Modificamos el HEADER para que tenga un fondo oscuro */
+/* Modificamos el HEADER para que sea transparente */
 header {
-    background-color: #111; /* Cambiado a un color gris muy oscuro */
-    padding: 1.5rem 0; /* Aumentamos el padding para que sea más grande */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Sombra más oscura */
+    background-color: transparent; /* ¡Cambiado! Ahora el header es transparente. */
+    padding: 1.5rem 0;
+    box-shadow: none; /* Eliminamos la sombra para que se vea más limpio */
 }
 
 /* Modificamos el NAV para que los elementos estén centrados y tengan un espacio uniforme */
 nav {
     display: flex;
-    justify-content: center; /* ¡Clave para centrar el logo y el menú! */
+    justify-content: center;
     align-items: center;
     max-width: 1200px;
     margin: auto;
     padding: 0 20px;
-    gap: 3rem; /* Aumentamos el espacio entre el logo y el menú para que se separen un poco */
+    gap: 3rem;
 }
 
 /* Modificamos el LOGO para que se vea blanco sobre el fondo oscuro */
 .logo {
-    font-size: 1.8rem; /* El logo un poco más grande */
+    font-size: 1.8rem;
     font-weight: bold;
-    color: #f5f5f5; /* Cambiado a un blanco suave para que destaque */
+    color: #f5f5f5;
     text-decoration: none;
     transition: transform 0.3s ease;
 }
@@ -41,52 +41,48 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 2rem; /* Espacio entre cada enlace */
+    gap: 2rem;
 }
 
 /* Modificamos los ENLACES para que sean más grandes y visibles */
 nav a {
     text-decoration: none;
-    color: #f5f5f5; /* Cambiado a un blanco suave para que se vean */
+    color: #f5f5f5;
     font-weight: bold;
-    font-size: 1.35rem; /* ¡Esto los hace más grandes! Puedes ajustar el tamaño */
-    padding: 10px 15px; /* Aumenta el área del "botón" */
+    font-size: 1.35rem;
+    padding: 10px 15px;
     transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-    background-color: rgba(255, 255, 255, 0.1); /* Ligero efecto al pasar el ratón */
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
 }
-/* Este es el estilo general de las secciones, lo modificaremos para que la portada no esté limitada. */
+/* Este es el estilo general de las secciones */
 section {
     padding: 60px 20px;
     text-align: center;
+    background-color: transparent; /* ¡Cambiado! Hacemos transparentes las secciones por defecto. */
 }
 
-/* Este es el estilo que hará que tu imagen se extienda por toda la pantalla.
-   Lo modificaremos para que ocupe todo el ancho y se vea centrada.
-*/
+/* Este es el estilo que hará que tu imagen se extienda por toda la pantalla. */
 #portada {
     position: relative;
-    /* La imagen de fondo ahora tiene un tamaño más pequeño para que no se corte */
-    background-image: url('image_23a792.jpg'); 
-    background-size: contain; /* ¡Clave! Muestra la imagen completa sin recortarla. */
+    background-image: url('image_23a792.jpg');
+    background-size: contain;
     background-position: center;
-    background-repeat: no-repeat; /* Evita que la imagen se repita si el espacio es muy grande. */
-    max-width: 1200px; /* Un tamaño máximo más grande para que la imagen se vea bien. */
-    height: 80vh; 
+    background-repeat: no-repeat;
+    max-width: 1200px;
+    height: 80vh;
     color: white;
     padding: 0;
-    margin: auto; /* Centra el contenedor en el medio del body. */
+    margin: auto;
 }
-/*
-   Añadimos este nuevo estilo para que el overlay (el sombreado oscuro)
-   también ocupe toda la pantalla.
-*/
+
+/* El fondo superpuesto de la portada */
 .portada-background-overlay {
-    background-color: rgba(0, 0, 0, 0.4); /* Color y opacidad para el sombreado */
-    position: absolute; /* Lo posicionamos sobre la imagen */
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -99,27 +95,27 @@ section {
     width: 100%;
     height: 100%;
     background: url('Foto4.jpg') no-repeat center center/cover;
-    opacity: 1; /* Este valor es el que controlará la transparencia de la imagen */
-    z-index: -1; /* Esto hace que la imagen quede detrás del texto */
+    opacity: 1;
+    z-index: -1;
 }
 
 /* Aseguramos que el H1 de la portada esté bien centrado y con buen contraste */
 #portada h1 {
-    font-size: 3rem; /* Puedes ajustar el tamaño si lo quieres más grande */
+    font-size: 3rem;
     margin-bottom: 0.5rem;
-    text-align: center; /* Asegura el centrado del texto */
-    color: white; /* Color blanco para el texto principal */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para que destaque sobre la imagen */
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 /* Ajustamos el texto secundario (subtítulo) de la portada */
-#portada p { /* Si tu texto es un <p> dentro de #portada */
-    font-size: 1.2rem; /* Puedes ajustar el tamaño */
-    text-align: center; /* Asegura el centrado */
-    color: rgba(255, 255, 255, 0.9); /* Un blanco ligeramente transparente */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Sombra para que destaque */
-    max-width: 600px; /* Limita el ancho del párrafo para que no se extienda demasiado */
-    margin: 0.5rem auto 2rem auto; /* Centra el párrafo y añade margen inferior */
+#portada p {
+    font-size: 1.2rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    max-width: 600px;
+    margin: 0.5rem auto 2rem auto;
 }
 
 .cta-button {
@@ -134,7 +130,13 @@ section {
 }
 
 #historia {
-    background: #fff;
+    background: transparent; /* ¡Cambiado! Hacemos el fondo de la sección de historia transparente. */
+    color: #fff;
+}
+
+#historia-pagina h2,
+#historia-pagina p {
+    color: #FFFFFF;
 }
 
 .productos-container {
@@ -169,7 +171,7 @@ section {
 }
 
 footer {
-    background: #333;
+    background: transparent; /* ¡Cambiado! El pie de página ahora es transparente. */
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -177,7 +179,7 @@ footer {
 }
 
 .slogan-secundario {
-    color: #DDA0DD; /* Púrpura pastel */
+    color: #DDA0DD;
     font-size: 1.2rem;
 }
 
@@ -185,6 +187,8 @@ footer {
     text-align: left;
     max-width: 800px;
     margin: auto;
+    background-color: transparent; /* ¡Agrega esta línea! */
+    padding: 60px 20px; /* Asegúrate de que tenga un padding para que no se pegue al borde. */
 }
 
 .galeria-fotos {
@@ -210,12 +214,13 @@ footer {
 #catalogo-enterizos {
     padding: 60px 20px;
     text-align: center;
+    background: transparent; /* ¡Cambiado! El fondo del catálogo ahora es transparente. */
 }
 
 #catalogo-enterizos h2 {
     font-size: 2.5em;
     margin-bottom: 40px;
-    color: #333;
+    color: #FFFFFF;
 }
 
 .container-catalogo {
@@ -261,17 +266,19 @@ footer {
 #contacto-pagina {
     padding: 80px 20px;
     text-align: center;
-    background-color: #f9f9f9;
+    background-color: transparent; /* ¡Cambiado! El fondo de la sección de contacto ahora es transparente. */
 }
 
 #contacto-pagina h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
+    color: #FFFFFF; /* Cambia a blanco puro */
 }
 
 #contacto-pagina p {
     font-size: 1.1em;
     margin-bottom: 40px;
+    color: #FFFFFF; /* Cambia a blanco puro */
 }
 
 .redes-sociales {
@@ -333,7 +340,7 @@ footer {
 }
 
 .social-img {
-    width: 60px; /* Ajusta el tamaño de tus iconos */
+    width: 60px;
     height: 60px;
     margin-bottom: 10px;
 }
@@ -366,7 +373,7 @@ footer {
 }
 
 .social-icon i {
-    font-size: 2.5em; /* Tamaño del icono */
+    font-size: 2.5em;
     transition: transform 0.3s ease;
 }
 
@@ -421,6 +428,19 @@ img {
 
 /* Nuevo estilo para la imagen del logo en el header */
 .logo-imagen img {
-    height: 160px; /* Puedes ajustar la altura para hacer el logo más grande o más pequeño */
-    width: auto; /* Mantiene la proporción original de la imagen */
+    height: 160px;
+    width: auto;
+}
+
+/* Nuevo estilo para el fondo lateral dinámico */
+.lateral-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('gift.png') repeat;
+    background-size: cover;
+    opacity: 1;
+    z-index: -2;
 }
