@@ -7,15 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<body>
-    		<div class="lateral-background"></div>
-    			<header>
-        			</header>
-    		<main>
-        		</main>
-    		<footer>
-       			 </footer>
-	</body>
+    <div class="lateral-background"></div>
     <header>
         <nav>
             <a href="index.html" class="logo-imagen"><img src="legalfit.png" alt="Legal Fit Logo"></a>
@@ -34,7 +26,7 @@
             <div class="container-catalogo">
                 <h2>Enterizo Mono Narumi</h2>
                 <div class="producto">
-                    <img src="MN_1.jpg" alt="Enterizo Mono Narumi Negro">
+                    <img src="MN_1.jpg" alt="Enterizo Mono Narumi Negro" onclick="openLightbox(['Enterizo_Negro_1.jpg', 'Enterizo_Negro_2.jpg', 'Enterizo_Negro_3.jpg'])">
                     <h3>Enterizo Mono Narumi Negro</h3>
                     <p class="precio">S/. 59.90</p>
                 </div>
@@ -44,12 +36,12 @@
                     <p class="precio">S/. 59.90</p>
                 </div>
                 <div class="producto">
-                    <img src="MN_3.jpg" alt="Enterizo Mono Narumi Gris">
+                    <img src="MN_3.jpg" alt="Enterizo Mono Narumi Gris" onclick="openLightbox(['Enterizo_Gris_1.jpg', 'Enterizo_Gris_2.jpg', 'Enterizo_Gris_3.jpg'])">
                     <h3>Enterizo Mono Narumi Gris</h3>
                     <p class="precio">S/. 59.90</p>
                 </div>
                 <div class="producto">
-                    <img src="MN_4.jpg" alt="Enterizo Mono Narumi Marrón">
+                    <img src="MN_4.jpg" alt="Enterizo Mono Narumi Marrón" onclick="openLightbox(['Enterizo_Marron_1.jpg', 'Enterizo_Marron_2.jpg', 'Enterizo_Marron_3.jpg'])">
                     <h3>Enterizo Mono Narumi Marrón</h3>
                     <p class="precio">S/. 59.90</p>
                 </div>
@@ -70,5 +62,15 @@
     <footer>
         <p>&copy; 2025 Legal Fit. Todos los derechos reservados.</p>
     </footer>
+
+    <div id="lightbox-overlay" class="lightbox-overlay" onclick="closeLightbox()">
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="closeLightbox()">&times;</span>
+            <div class="lightbox-images">
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
